@@ -1,30 +1,58 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Hello Techie"/>
+    <ToDo v-bind:todos="todos" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-
+import ToDo from './components/Todos';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    ToDo
+  },
+
+  data() {
+    return {
+        todos: [
+          {
+            id: 1,
+            title: "Eat",
+            completed: false
+          },
+          {
+            id: 2,
+            title: "Drink",
+            completed: false
+          },
+          {
+            id: 3,
+            title: "Code",
+            completed: false
+          },
+          {
+            id: 4,
+            title: "Sleep",
+            completed: false
+          }
+        ]
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    background-color: rgb(245, 245, 245);
+    color: black;
+  }
 </style>

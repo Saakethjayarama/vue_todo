@@ -1,16 +1,18 @@
 <template>
-    <div class="techie">
-        Hello Techieee
+    <div>
+        <TodoItem />
     </div>
 </template>
+
 <script>
+import TodoItem from './TodoItem.vue'
 export default {
-    name: "Saaketh",
+    name: "ToDo",
+    components: TodoItem,
     props: ["todos"]
 }
 </script>
+
 <style scoped>
-.techie{
-    color: tomato;
-}
+
 </style>

@@ -10,3 +10,14 @@ npm run serve
 To start the graphical user interface to create project
 vue ui
 
+component: {
+
+}
+props: {
+
+} 
+data() {
+    return {
+        
+    }
+}
