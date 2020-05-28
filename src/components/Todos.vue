@@ -1,6 +1,9 @@
 <template>
     <div>
-        <TodoItem />
+        <h1>To Dos </h1><br><br>
+        <div v-for="todo in todos" :key="todo.id" >
+            <TodoItem v-bind:todo="todo" v-on:del-todo="$emit('del-todo', todo.id)"/>
+        </div>
     </div>
 </template>
 
@@ -8,7 +11,9 @@
 import TodoItem from './TodoItem.vue'
 export default {
     name: "ToDo",
-    components: TodoItem,
+    components: {
+        TodoItem
+    },
     props: ["todos"]
 }
 </script>
